@@ -10,12 +10,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AeroLink.com</title>
     @vite('resources/css/app.css')
-    
+
 
     <style>
     .formulario {
         margin: 20px;
         width: 30%;
+        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+    }
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    body {
+        background-image: url('https://media.istockphoto.com/id/1178574687/es/foto/cielo-azul-y-nubes-blancas.webp?b=1&s=170667a&w=0&k=20&c=r-L578aQNPfBKu4PC0u7vvGi3o2duqC1nLdIS06GUlI=');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
     }
     </style>
 
@@ -24,10 +41,10 @@
 <body>
     <!--------------------------- Formulario ------------------------------>
     <nav >
-        <div class="formulario ">
+        <div class="formulario">
             <div class=" bg-blue-400 w-50 p-20 rounded-lg ">
                 <h2 class="text-2xl font-semibold mb-4">Formulario de contacto</h2>
-                <form action="{{route('todos')}}" method="POST">
+                <form action="{{route('Todos')}}" method="POST">
                     @csrf
                     <div class="mb-4">
                         <label for="nombre" class="block text-gray-700 ">Nombre</label>

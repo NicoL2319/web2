@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\todosController;
+use app\Http\Controllers\TodosController;
 use app\Http\Controllers\Controller;
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 Route::get('/top', function () {
     return view('pagina.principal');
-})-> name('todos');;
+})->name('Todos');;
 
-Route::post('/top', [app\Http\Controllers\todosController :: class, 'store']) -> name('todos');
+Route::post('/top', [TodosController::class, 'store']) ->name('Todos');
+
